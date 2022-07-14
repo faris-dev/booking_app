@@ -1,3 +1,4 @@
+import 'package:booking_app/utils/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -8,7 +9,7 @@ void main() {
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: Routes.INITIAL,
-      // theme: appThemeData,
+      theme: appThemeData,
       defaultTransition: Transition.fade,
       getPages: AppPages.pages,
       // locale: Locale('pt', 'BR'),

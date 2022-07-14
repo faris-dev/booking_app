@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../controller/splash/splash_controller.dart';
 
 
-class HomePage extends GetView<SplashController> {
+class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
