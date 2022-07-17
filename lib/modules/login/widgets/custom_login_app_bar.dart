@@ -27,8 +27,8 @@ class LoginAppBar extends StatelessWidget implements PreferredSizeWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(WELCOME_TEXT, style: loginTitleTextStyle),
-          Text(MANAGE_BUS_TEXT, style: loginSubTitleTextStyle),
+          Text(WELCOME_TEXT, style: titleTextStyle),
+          Text(MANAGE_BUS_TEXT, style: subTitleTextStyle),
         ],
       ),
     );

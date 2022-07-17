@@ -1,18 +1,18 @@
-import 'package:booking_app/utils/constants.dart';
-import 'package:booking_app/utils/theme/app_text_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../utils/theme/app_colors.dart';
+import '../utils/theme/app_colors.dart';
+import '../utils/theme/app_text_theme.dart';
 
-
-class LoginButton extends StatelessWidget {
-  const LoginButton({
+class CustomButton extends StatelessWidget {
+  const CustomButton({
     Key? key,
-    required this.onLoginPressed,
+    required this.title,
+    required this.onPressed,
   }) : super(key: key);
 
-  final Function onLoginPressed;
+  final String title;
+  final Function onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -30,8 +30,8 @@ class LoginButton extends StatelessWidget {
             ),
           ),
         ),
-        onPressed: () => onLoginPressed(),
-        child: Text(LOGIN_TEXT, style: buttonTextStyle),
+        onPressed: () => onPressed(),
+        child: Text(title, style: buttonTextStyle),
       ),
     );
   }

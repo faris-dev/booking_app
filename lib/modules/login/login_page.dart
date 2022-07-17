@@ -7,7 +7,7 @@ import 'widgets/login_button.dart';
 import 'widgets/login_text_field.dart';
 
 class LoginPage extends GetView {
-  Function onLoginPressed = () => Get.toNamed(Routes.HOME);
+  Function onLoginPressed = () => Get.offNamed(Routes.HOME);
 
   @override
   Widget build(BuildContext context) {
