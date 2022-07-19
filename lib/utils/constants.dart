@@ -2,8 +2,10 @@
 // **************************Icons/Images/SVGs***************************
 const SPLASH_LOGO = "assets/images/splash_logo.png";
 const LOGIN_APPBAR_LOGO = "assets/images/login_bg_appbar.png";
-const INTRO_IMAGE_2 = "assets/images/intro_bg2.png";
-const INTRO_IMAGE_3 = "assets/images/intro_bg3.png";
+const SEAT_ICON = "assets/images/Seat.png";
+const BUS_WHITE_IMAGE = 'assets/images/bus_white.png';
+const BUS_IMAGE = 'assets/images/bus.png';
+const DRIVER_IMAGE = 'assets/images/driver.png';
 
 
 // *********************Text Constants********************************
@@ -19,3 +21,9 @@ const MOBILE_SCREEN_TITLE = "Hello, Sign In to your account";
 const MOBILE_NUMBER_TEXT = "Mobile Number";
 const PERSONAL_DETAILS_TEXT = "Personal Details";
 const DRIVER_LIST_TITLE = "Driver List";
+const BUS_TEXT = 'Bus';
+const DRIVER_TEXT = 'Driver';
+const BUS_SUB_TEXT = 'Manage your Bus';
+const DRIVER_SUB_TEXT = 'Manage your Driver';
+const MANAGE_TEXT = 'Manage';
+const BUS_SUBTITLE = 'Swift Scania P-series';
