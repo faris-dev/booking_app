@@ -8,7 +8,6 @@ class appBarHome extends StatelessWidget implements PreferredSizeWidget {
   const appBarHome({
     Key? key,
   }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return AppBar(

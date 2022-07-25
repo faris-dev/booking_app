@@ -1,9 +1,11 @@
 import 'package:booking_app/routes/app_pages.dart';
 import 'package:booking_app/utils/constants.dart';
+import 'package:booking_app/utils/helper.dart';
 import 'package:booking_app/utils/theme/app_text_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../utils/globals.dart';
 import '../../utils/theme/app_colors.dart';
 
 class SplashPage extends StatefulWidget {
@@ -17,6 +19,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
+    getUserData();
   }
 
   @override
@@ -48,7 +51,7 @@ class _SplashPageState extends State<SplashPage> {
                         RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ))),
-                onPressed: () =>Get.offNamed(Routes.LOGIN),
+                onPressed: () =>Get.offNamed(isLoggedIn?Routes.HOME:Routes.LOGIN),
                 child: Text(SPLASH_BUTTON_TEXT, style: buttonSplashTextStyle),
               ),
             ))

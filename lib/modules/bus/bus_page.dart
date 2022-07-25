@@ -14,7 +14,7 @@ class BusPage extends StatelessWidget {
         padding: const EdgeInsets.all(15),
         children: [
           DriverWidget(name: 'Rohit Sharma',licenseNo: '12345678',),
-          BusSeats()
+          BusSeatsLayout()
         ],
       ),
     );

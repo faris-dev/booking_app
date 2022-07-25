@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/theme/app_colors.dart';
 
-class BusSeats extends StatelessWidget {
+class BusSeatsLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -1,3 +1,4 @@
+import 'package:booking_app/modules/driver/controller/driver_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -5,7 +6,7 @@ import '../utils/theme/app_colors.dart';
 import '../utils/theme/app_text_theme.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({
+  CustomButton({
     Key? key,
     required this.title,
     required this.onPressed,
@@ -13,6 +14,7 @@ class CustomButton extends StatelessWidget {
 
   final String title;
   final Function onPressed;
+  DriverController _driverController = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,11 @@ class CustomButton extends StatelessWidget {
           ),
         ),
         onPressed: () => onPressed(),
-        child: Text(title, style: buttonTextStyle),
+        child:  _driverController.isLoading
+            ? CircularProgressIndicator(
+          color: kColorWhite,
+        )
+            : Text(title, style: buttonTextStyle),
       ),
     );
   }

@@ -10,6 +10,11 @@ class HomeController extends GetxController {
 
   @override
   void onInit() {
+    getBusList();
+    super.onInit();
+  }
+
+  Future<void> getBusList() async {
     BusProvider().getBusList(
       onSuccess: (data) {
         this.busList.addAll(data.busList!);
@@ -23,6 +28,5 @@ class HomeController extends GetxController {
         print("Error");
       },
     );
-    super.onInit();
   }
 }

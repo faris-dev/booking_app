@@ -8,7 +8,7 @@ import '../../routes/app_pages.dart';
 import '../../utils/constants.dart';
 import '../../utils/globals.dart';
 import '../../utils/theme/app_colors.dart';
-import '../../widgets/bus_count_widget.dart';
+import '../../widgets/count_widget.dart';
 import 'controller/home_controller.dart';
 import 'model/bus.dart';
 import 'widgets/appbar_home.dart';
@@ -20,7 +20,7 @@ class HomePage extends GetView {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(
-        builder: (homeController) => Scaffold(
+        builder: (_) => Scaffold(
               backgroundColor: kBackgroundColor,
               appBar: AppBarHome(),
               body: ListView(
@@ -47,8 +47,8 @@ class HomePage extends GetView {
                     ],
                   ),
                   SizedBox(height: 10),
-                  BusCountWidget(
-                    busCount: homeController.busCount,
+                  CountWidget(
+                    count: homeController.busCount,
                   ),
                   ListView.separated(
                     shrinkWrap: true,

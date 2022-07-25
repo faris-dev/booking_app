@@ -1,11 +1,19 @@
+import 'package:booking_app/utils/helper.dart';
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
+import '../../../utils/constants.dart';
 import '../../../utils/theme/app_colors.dart';
+import '../controller/driver_controller.dart';
+import '../model/drive_list_response.dart';
 
 class DriverListTileWidget extends StatelessWidget {
-  const DriverListTileWidget({
+   DriverListTileWidget({
     Key? key,
+    required this.driver,
   }) : super(key: key);
+
+  final Driver driver;
+  DriverController _driverController = Get.find<DriverController>();
 
   @override
   Widget build(BuildContext context) {
@@ -18,19 +26,19 @@ class DriverListTileWidget extends StatelessWidget {
         leading: ClipRRect(
           borderRadius: BorderRadius.circular(30.0),
           child: Image.asset(
-            'assets/images/avatar.webp',
+            DRIVER_IMAGE2,
             fit: BoxFit.cover,
             height: 50,
             width: 50,
           ),
         ),
         title: Text(
-          'KSRTC',
+          (driver.name??NO_NAME_TEXT).inCaps,
           style: TextStyle(
               color: kTextColorDark, fontSize: 16, fontWeight: FontWeight.w500),
         ),
         subtitle: Text(
-          'Swift Scania P-series',
+          driver.licenseNo??driver.mobile??NO_MOBILE_OR_LICENSE_TEXT,
           style: TextStyle(
               color: kTextColorDark, fontSize: 14, fontWeight: FontWeight.w400),
         ),
@@ -39,9 +47,9 @@ class DriverListTileWidget extends StatelessWidget {
             backgroundColor: MaterialStateProperty.all(kPrimaryColor),
             foregroundColor: MaterialStateProperty.all(kTextColorWhite),
           ),
-          onPressed: () {},
+          onPressed: ()=>_driverController.deleteDriver(driver.id),
           child: const Text(
-            'Delete',
+            DELETE_TEXT,
           ),
         ),
       ),

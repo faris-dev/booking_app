@@ -1,7 +1,7 @@
+import 'package:booking_app/modules/driver/driver_list_page.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
-import '../modules/add_driver/add_driver_page.dart';
 import '../modules/bus/bus_page.dart';
-import '../modules/driver_list/driver_list_page.dart';
+import '../modules/driver/add_driver_page.dart';
 import '../modules/home/home_page.dart';
 import '../modules/login/login_page.dart';
 import '../modules/splash/splash_page.dart';

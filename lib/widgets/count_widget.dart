@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 
 import '../utils/theme/app_colors.dart';
 
-class BusCountWidget extends StatelessWidget {
-  const BusCountWidget({
+class CountWidget extends StatelessWidget {
+  const CountWidget({
     Key? key,
-    required this.busCount
+    required this.count
   }) : super(key: key);
-  final int busCount;
+  final int count;
   @override
   Widget build(BuildContext context) {
     return Text(
-      '$busCount Buses Found',
+      '$count Buses Found',
       style: TextStyle(
           fontSize: 18, fontWeight: FontWeight.w500, color: kTextColorGrey),
     );

@@ -3,18 +3,20 @@
 import 'package:booking_app/Services/api.dart';
 import 'package:booking_app/modules/home/model/bus.dart';
 
-import '../../../utils/globals.dart';
+import '../model/login_response.dart';
 
-class BusProvider {
-  void getBusList({
+
+class LoginProvider {
+  void login({
+    var data,
     Function()? beforeSend,
-    required Function(BusListResponse busList) onSuccess,
+    required Function(LoginResponse response) onSuccess,
     required Function(dynamic error) onError,
   }) {
-    ApiRequest(url: 'BusListApi/$user_key/', data: {}).get(
+    ApiRequest(url: 'LoginApi', data: data).post(
       beforeSend: () => {if (beforeSend != null) beforeSend()},
       onSuccess: (data) {
-        onSuccess(BusListResponse.fromJson(data));
+        onSuccess(LoginResponse.fromJson(data));
       },
       onError: (error) => {if (onError != null) onError(error)},
     );
